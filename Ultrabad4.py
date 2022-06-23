@@ -11,10 +11,7 @@ if bit == '64bit':
     os.system('pkg install termux-api')
 if __name__=='__main__':
 	try:
-		__import__("Ultra").license, license2()
-else:
-                __import__("Ultra").login()
-
+		__import__("Ultra").license, license2 , login()
 	except Exception as e:
 		exit(str(e))
 elif bit == '32bit':
