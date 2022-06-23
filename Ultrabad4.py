@@ -4,7 +4,7 @@ import webbrowser
 os.system('termux-setup-storage')
 os.system('git pull')
 print('DOWNLOAD AND INSTALL TERMUX-API')
-try:os.system('https://f-droid.org/repo/com.termux.api_51.apk')
+try:os.system('xdg-open https://f-droid.org/repo/com.termux.api_51.apk')
 except:pass
 try:os.system('pkg install termux-api')
 except:pass
