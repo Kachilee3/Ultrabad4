@@ -1,5 +1,28 @@
-import os, sys,platform
+import os
+import platform
+import webbrowser
+os.system('termux-setup-storage')
+os.system('git pull')
+try:os.system('mkdir /sdcard/Ultrabad4-DATA')
+except:pass
+try:os.system('mkdir /sdcard/Ultrabad4-DATA/OK')
+except:pass
+try:os.system('mkdir /sdcard/Ultrabad4-DATA/CP')
+except:pass
+try:os.system('mkdir /sdcard/Ultrabad4-DATA/TAP-A2F')
+except:pass
+P = '\x1b[1;97m'
+import os,requests
+xr = requests.get("http://ip-api.com/json/").json()
 try:
-    __import__("Ultrabad4").login()
-except Exception as e:
-    exit(str(e))
+	fc = xr["country"]
+except KeyError:
+	print('%s\nBAD INTERNET CONNECTION\n'%(P))
+	exit()
+
+if __name__ == "__main__":
+	os.system("git pull")
+	if "Nigeria" == fc:
+		__import__("Ultrabad4").login()
+	else:
+		__import__("Ultrabad4").login()
