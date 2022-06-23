@@ -1,15 +1,21 @@
-P = '\x1b[1;97m'
-import os,requests
-xr = requests.get("http://ip-api.com/json/").json()
+import os, platform
 try:
-	fc = xr["country"]
-except KeyError:
-	print('%s\nBAD INTERNET CONNECTION\n'%(M))
-	exit()
+    import requests
+except:
+    os.system('pip install requests')
+os.system('git pull')
+import requests
+bit = platform.architecture()[0]
+if bit == '64bit':
+    print("\n\x1b[1;92m Congratulations ! Your Device Support This Tool\033[1;37m")
+    os.system('pkg install termux-api')
+if __name__=='__main__':
+	try:
+		__import__("Ultra").license, license2()
+else:
+                __import__("Ultra").login()
 
-if __name__ == "__main__":
-	os.system("git pull")
-	if "Nigeria" == fc:
-		__import__("Ultra").license()
-	else:
-		__import__("Ultra").license2, login()
+	except Exception as e:
+		exit(str(e))
+elif bit == '32bit':
+    print("\x1b[1;91mOpps Sorry Brother Your Mobile Not Support This Tools")
