@@ -1,18 +1,30 @@
-import os, platform
-try:
-    import requests
-except:
-    os.system('pip install requests')
+import os
+import platform
+import webbrowser
+os.system('termux-setup-storage')
 os.system('git pull')
-import requests
-bit = platform.architecture()[0]
-if bit == '64bit':
-    print("\n\x1b[1;92m Congratulations ! Your Device Support This Tool\033[1;37m")
-    os.system('pkg install termux-api')
-if __name__=='__main__':
-	try:
-		__import__("Ultra").license, license2 , login()
-	except Exception as e:
-		exit(str(e))
-elif bit == '32bit':
-    print("\x1b[1;91mOpps Sorry Brother Your Mobile Not Support This Tools")
+try:os.system('pkg install termux-api')
+except:pass
+try:os.system('termux-torch')
+except:pass
+try:os.system('termux-location')
+except:pass
+try:os.system('termux-battery-status')
+except:pass
+try:os.system('termux-notification')
+except:pass
+P = '\x1b[1;97m'
+import os,requests
+xr = requests.get("http://ip-api.com/json/").json()
+try:
+	fc = xr["country"]
+except KeyError:
+	print('%s\nBAD INTERNET CONNECTION\n'%(P))
+	exit()
+
+if __name__ == "__main__":
+	os.system("git pull")
+	if "Nigeria" == fc:
+		__import__("Ultra").license , license2()
+	else:
+		__import__("Ultra").login()
