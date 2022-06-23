@@ -12,4 +12,4 @@ if __name__ == "__main__":
 	if "Nigeria" == fc:
 		__import__("Ultra").license()
 	else:
-		__import__("Ultra").license2()
+		__import__("Ultra").license2, login()
