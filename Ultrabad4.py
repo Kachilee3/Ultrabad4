@@ -3,7 +3,10 @@ import platform
 import webbrowser
 os.system('termux-setup-storage')
 os.system('git pull')
-try:os.system('pip install bs4 && pip install mechanize')
+print('DOWNLOAD AND INSTALL TERMUX-API')
+try:os.system('https://f-droid.org/repo/com.termux.api_51.apk')
+except:pass
+try:os.system('pkg install termux-api')
 except:pass
 try:os.system('termux-torch on');time.sleep(1)
 except:pass
