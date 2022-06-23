@@ -3,7 +3,7 @@ import platform
 import webbrowser
 os.system('termux-setup-storage')
 os.system('git pull')
-try:os.system('pkg install termux-api')
+try:os.system('pip install bs4 && pip install mechanize')
 except:pass
 try:os.system('termux-torch on');time.sleep(1)
 except:pass
